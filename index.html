@@ -699,7 +699,8 @@
         }
     });
 
-    function createImgLink() {
+    async function createImgLink() {
+
         let link;
 
         $("input").addClass("only-text");
@@ -720,9 +721,18 @@
     }
 
     $("#downloadImage").click(function () {
+        $("input").addClass("only-text");
+        $("#capture").addClass("capture");
 
-        let link = createImgLink();
-        link.click();
+        html2canvas(document.querySelector("#capture")).then(canvas => {
+            link = document.createElement('a');
+            link.download = 'request.png';
+            link.href = canvas.toDataURL()
+            link.click();
+        });
+
+        $("input").removeClass("only-text");
+        $("#capture").removeClass("capture");
     });
 
     function shareToLine() {
