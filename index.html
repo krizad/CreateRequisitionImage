@@ -20,6 +20,7 @@
         integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+
 </head>
 
 <style>
@@ -58,7 +59,8 @@
         border-radius: 0;
         padding: 0 0 0 15px;
     }
-    #capture{
+
+    #capture {
         overflow-x: visible;
     }
 
@@ -82,6 +84,11 @@
     <div class="container-fluid">
         <div class="mt-3 mb-2 d-flex justify-content-start">
             <button type="button" name="" id="downloadImage" class="btn btn-success">ดาวน์โหลดรูปภาพ</button>
+            <div class="line-it-button" data-lang="th" data-type="share-a" data-env="REAL"
+                data-url="https://developers.line.biz/en/docs/line-social-plugins/install-guide/using-line-share-buttons/"
+                data-color="default" data-size="large" data-count="false" data-ver="3" style="display: none;"></div>
+            <script src="https://www.line-website.com/social-plugins/js/thirdparty/loader.min.js" async="async"
+                defer="defer"></script>
         </div>
 
         <div id="capture" class="">
@@ -196,6 +203,11 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <datalist id="idListOption">
+                    </datalist>
+                    <datalist id="nameListOption">
+                    </datalist>
+
                     <!-- row1 -->
                     <tr id="row1">
                         <td class="center" style="width: 1%;" scope="row">
@@ -203,10 +215,11 @@
                                 value="1" disabled>
                         </td>
                         <td style="width: 10%;">
-                            <input type="text" class="form-control" name="id" id="id1" placeholder="รหัสสินค้า">
+                            <input type="text" class="form-control" list="idListOption" name="id" id="id1" placeholder="รหัสสินค้า">
+                            
                         </td>
                         <td colspan="2" style="width: 20%;">
-                            <input type="text" class="form-control" name="name" id="name1" placeholder="รายการ">
+                            <input type="text" class="form-control" list="nameListOption" name="name" id="name1" placeholder="รายการ">
                         </td>
                         <td class="center" style="width: 10%;">
                             <input type="text" class="form-control " name="amount" id="amount1" placeholder="จำนวน">
@@ -218,13 +231,15 @@
                             <input type="text" class="form-control" name="price" id="price1" placeholder="ราคา">
                         </td>
                         <td style="width: 10%;">
-                            <input type="text" class="form-control" name="sumPrice" id="sumPrice1" placeholder="ราคารวม">
+                            <input type="text" class="form-control" name="sumPrice" id="sumPrice1"
+                                placeholder="ราคารวม">
                         </td>
                         <td style="width: 10%;">
                             <input type="text" class="form-control" name="date" id="date1" placeholder="วันที่ต้องการ">
                         </td>
                         <td style="width: 19%;">
-                            <input type="text" class="form-control" name="sale" id="sale1" placeholder="รายละเอียดผู้ขาย">
+                            <input type="text" class="form-control" name="sale" id="sale1"
+                                placeholder="รายละเอียดผู้ขาย">
                         </td>
                     </tr>
                     <!-- row2 -->
@@ -234,10 +249,10 @@
                                 value="2" disabled>
                         </td>
                         <td style="width: 10%;">
-                            <input type="text" class="form-control" name="id" id="id2" placeholder="รหัสสินค้า">
+                            <input type="text" class="form-control" list="idListOption" name="id" id="id2" placeholder="รหัสสินค้า">
                         </td>
                         <td colspan="2" style="width: 20%;">
-                            <input type="text" class="form-control" name="name" id="name2" placeholder="รายการ">
+                            <input type="text" class="form-control" list="nameListOption" name="name" id="name2" placeholder="รายการ">
                         </td>
                         <td class="center" style="width: 10%;">
                             <input type="text" class="form-control" name="amount" id="amount2" placeholder="จำนวน">
@@ -249,13 +264,15 @@
                             <input type="text" class="form-control" name="price" id="price2" placeholder="ราคา">
                         </td>
                         <td style="width: 10%;">
-                            <input type="text" class="form-control" name="sumPrice" id="sumPrice2" placeholder="ราคารวม">
+                            <input type="text" class="form-control" name="sumPrice" id="sumPrice2"
+                                placeholder="ราคารวม">
                         </td>
                         <td style="width: 10%;">
                             <input type="text" class="form-control" name="date" id="date2" placeholder="วันที่ต้องการ">
                         </td>
                         <td style="width: 19%;">
-                            <input type="text" class="form-control" name="sale" id="sale2" placeholder="รายละเอียดผู้ขาย">
+                            <input type="text" class="form-control" name="sale" id="sale2"
+                                placeholder="รายละเอียดผู้ขาย">
                         </td>
                     </tr>
                     <!-- row3 -->
@@ -265,10 +282,10 @@
                                 value="3" disabled>
                         </td>
                         <td style="width: 10%;">
-                            <input type="text" class="form-control" name="id" id="id3" placeholder="รหัสสินค้า">
+                            <input type="text" class="form-control" list="idListOption" name="id" id="id3" placeholder="รหัสสินค้า">
                         </td>
                         <td colspan="2" style="width: 20%;">
-                            <input type="text" class="form-control" name="name" id="name3" placeholder="รายการ">
+                            <input type="text" class="form-control" list="nameListOption" name="name" id="name3" placeholder="รายการ">
                         </td>
                         <td class="center" style="width: 10%;">
                             <input type="text" class="form-control" name="amount" id="amount3" placeholder="จำนวน">
@@ -280,13 +297,15 @@
                             <input type="text" class="form-control" name="price" id="price3" placeholder="ราคา">
                         </td>
                         <td style="width: 10%;">
-                            <input type="text" class="form-control" name="sumPrice" id="sumPrice3" placeholder="ราคารวม">
+                            <input type="text" class="form-control" name="sumPrice" id="sumPrice3"
+                                placeholder="ราคารวม">
                         </td>
                         <td style="width: 10%;">
                             <input type="text" class="form-control" name="date" id="date3" placeholder="วันที่ต้องการ">
                         </td>
                         <td style="width: 19%;">
-                            <input type="text" class="form-control" name="sale" id="sale3" placeholder="รายละเอียดผู้ขาย">
+                            <input type="text" class="form-control" name="sale" id="sale3"
+                                placeholder="รายละเอียดผู้ขาย">
                         </td>
                     </tr>
 
@@ -297,10 +316,10 @@
                                 value="4" disabled>
                         </td>
                         <td style="width: 10%;">
-                            <input type="text" class="form-control" name="id" id="id4" placeholder="รหัสสินค้า">
+                            <input type="text" class="form-control" list="idListOption" name="id" id="id4" placeholder="รหัสสินค้า">
                         </td>
                         <td colspan="2" style="width: 20%;">
-                            <input type="text" class="form-control" name="name" id="name4" placeholder="รายการ">
+                            <input type="text" class="form-control" list="nameListOption" name="name" id="name4" placeholder="รายการ">
                         </td>
                         <td class="center" style="width: 10%;">
                             <input type="text" class="form-control" name="amount" id="amount4" placeholder="จำนวน">
@@ -312,13 +331,15 @@
                             <input type="text" class="form-control" name="price" id="price4" placeholder="ราคา">
                         </td>
                         <td style="width: 10%;">
-                            <input type="text" class="form-control" name="sumPrice" id="sumPrice4" placeholder="ราคารวม">
+                            <input type="text" class="form-control" name="sumPrice" id="sumPrice4"
+                                placeholder="ราคารวม">
                         </td>
                         <td style="width: 10%;">
                             <input type="text" class="form-control" name="date" id="date4" placeholder="วันที่ต้องการ">
                         </td>
                         <td style="width: 19%;">
-                            <input type="text" class="form-control" name="sale" id="sale4" placeholder="รายละเอียดผู้ขาย">
+                            <input type="text" class="form-control" name="sale" id="sale4"
+                                placeholder="รายละเอียดผู้ขาย">
                         </td>
                     </tr>
 
@@ -328,10 +349,10 @@
                                 value="5" disabled>
                         </td>
                         <td style="width: 10%;">
-                            <input type="text" class="form-control" name="id" id="id5" placeholder="รหัสสินค้า">
+                            <input type="text" class="form-control" list="idListOption" name="id" id="id5" placeholder="รหัสสินค้า">
                         </td>
                         <td colspan="2" style="width: 20%;">
-                            <input type="text" class="form-control" name="name" id="name5" placeholder="รายการ">
+                            <input type="text" class="form-control" list="nameListOption" name="name" id="name5" placeholder="รายการ">
                         </td>
                         <td class="center" style="width: 10%;">
                             <input type="text" class="form-control" name="amount" id="amount5" placeholder="จำนวน">
@@ -343,13 +364,15 @@
                             <input type="text" class="form-control" name="price" id="price5" placeholder="ราคา">
                         </td>
                         <td style="width: 10%;">
-                            <input type="text" class="form-control" name="sumPrice" id="sumPrice5" placeholder="ราคารวม">
+                            <input type="text" class="form-control" name="sumPrice" id="sumPrice5"
+                                placeholder="ราคารวม">
                         </td>
                         <td style="width: 10%;">
                             <input type="text" class="form-control" name="date" id="date5" placeholder="วันที่ต้องการ">
                         </td>
                         <td style="width: 19%;">
-                            <input type="text" class="form-control" name="sale" id="sale5" placeholder="รายละเอียดผู้ขาย">
+                            <input type="text" class="form-control" name="sale" id="sale5"
+                                placeholder="รายละเอียดผู้ขาย">
                         </td>
                     </tr>
 
@@ -359,10 +382,10 @@
                                 value="6" disabled>
                         </td>
                         <td style="width: 10%;">
-                            <input type="text" class="form-control" name="id" id="id6" placeholder="รหัสสินค้า">
+                            <input type="text" class="form-control" list="idListOption" name="id" id="id6" placeholder="รหัสสินค้า">
                         </td>
                         <td colspan="2" style="width: 20%;">
-                            <input type="text" class="form-control" name="name" id="name6" placeholder="รายการ">
+                            <input type="text" class="form-control" list="nameListOption" name="name" id="name6" placeholder="รายการ">
                         </td>
                         <td class="center" style="width: 10%;">
                             <input type="text" class="form-control" name="amount" id="amount6" placeholder="จำนวน">
@@ -374,13 +397,15 @@
                             <input type="text" class="form-control" name="price" id="price6" placeholder="ราคา">
                         </td>
                         <td style="width: 10%;">
-                            <input type="text" class="form-control" name="sumPrice" id="sumPrice6" placeholder="ราคารวม">
+                            <input type="text" class="form-control" name="sumPrice" id="sumPrice6"
+                                placeholder="ราคารวม">
                         </td>
                         <td style="width: 10%;">
                             <input type="text" class="form-control" name="date" id="date6" placeholder="วันที่ต้องการ">
                         </td>
                         <td style="width: 19%;">
-                            <input type="text" class="form-control" name="sale" id="sale6" placeholder="รายละเอียดผู้ขาย">
+                            <input type="text" class="form-control" name="sale" id="sale6"
+                                placeholder="รายละเอียดผู้ขาย">
                         </td>
                     </tr>
 
@@ -390,10 +415,10 @@
                                 value="7" disabled>
                         </td>
                         <td style="width: 10%;">
-                            <input type="text" class="form-control" name="id" id="id7" placeholder="รหัสสินค้า">
+                            <input type="text" class="form-control" list="idListOption" name="id" id="id7" placeholder="รหัสสินค้า">
                         </td>
                         <td colspan="2" style="width: 20%;">
-                            <input type="text" class="form-control" name="name" id="name7" placeholder="รายการ">
+                            <input type="text" class="form-control" list="nameListOption" name="name" id="name7" placeholder="รายการ">
                         </td>
                         <td class="center" style="width: 10%;">
                             <input type="text" class="form-control" name="amount" id="amount7" placeholder="จำนวน">
@@ -405,13 +430,15 @@
                             <input type="text" class="form-control" name="price" id="price7" placeholder="ราคา">
                         </td>
                         <td style="width: 10%;">
-                            <input type="text" class="form-control" name="sumPrice" id="sumPrice7" placeholder="ราคารวม">
+                            <input type="text" class="form-control" name="sumPrice" id="sumPrice7"
+                                placeholder="ราคารวม">
                         </td>
                         <td style="width: 10%;">
                             <input type="text" class="form-control" name="date" id="date7" placeholder="วันที่ต้องการ">
                         </td>
                         <td style="width: 19%;">
-                            <input type="text" class="form-control" name="sale" id="sale7" placeholder="รายละเอียดผู้ขาย">
+                            <input type="text" class="form-control" name="sale" id="sale7"
+                                placeholder="รายละเอียดผู้ขาย">
                         </td>
                     </tr>
 
@@ -421,10 +448,10 @@
                                 value="8" disabled>
                         </td>
                         <td style="width: 10%;">
-                            <input type="text" class="form-control" name="id" id="id8" placeholder="รหัสสินค้า">
+                            <input type="text" class="form-control" list="idListOption" name="id" id="id8" placeholder="รหัสสินค้า">
                         </td>
                         <td colspan="2" style="width: 20%;">
-                            <input type="text" class="form-control" name="name" id="name8" placeholder="รายการ">
+                            <input type="text" class="form-control" list="nameListOption" name="name" id="name8" placeholder="รายการ">
                         </td>
                         <td class="center" style="width: 10%;">
                             <input type="text" class="form-control" name="amount" id="amount8" placeholder="จำนวน">
@@ -436,13 +463,15 @@
                             <input type="text" class="form-control" name="price" id="price8" placeholder="ราคา">
                         </td>
                         <td style="width: 10%;">
-                            <input type="text" class="form-control" name="sumPrice" id="sumPrice8" placeholder="ราคารวม">
+                            <input type="text" class="form-control" name="sumPrice" id="sumPrice8"
+                                placeholder="ราคารวม">
                         </td>
                         <td style="width: 10%;">
                             <input type="text" class="form-control" name="date" id="date8" placeholder="วันที่ต้องการ">
                         </td>
                         <td style="width: 19%;">
-                            <input type="text" class="form-control" name="sale" id="sale8" placeholder="รายละเอียดผู้ขาย">
+                            <input type="text" class="form-control" name="sale" id="sale8"
+                                placeholder="รายละเอียดผู้ขาย">
                         </td>
                     </tr>
 
@@ -452,10 +481,10 @@
                                 value="9" disabled>
                         </td>
                         <td style="width: 10%;">
-                            <input type="text" class="form-control" name="id" id="id9" placeholder="รหัสสินค้า">
+                            <input type="text" class="form-control" list="idListOption" name="id" id="id9" placeholder="รหัสสินค้า">
                         </td>
                         <td colspan="2" style="width: 20%;">
-                            <input type="text" class="form-control" name="name" id="name9" placeholder="รายการ">
+                            <input type="text" class="form-control" list="nameListOption" name="name" id="name9" placeholder="รายการ">
                         </td>
                         <td class="center" style="width: 10%;">
                             <input type="text" class="form-control" name="amount" id="amount9" placeholder="จำนวน">
@@ -467,13 +496,15 @@
                             <input type="text" class="form-control" name="price" id="price9" placeholder="ราคา">
                         </td>
                         <td style="width: 10%;">
-                            <input type="text" class="form-control" name="sumPrice" id="sumPrice9" placeholder="ราคารวม">
+                            <input type="text" class="form-control" name="sumPrice" id="sumPrice9"
+                                placeholder="ราคารวม">
                         </td>
                         <td style="width: 10%;">
                             <input type="text" class="form-control" name="date" id="date9" placeholder="วันที่ต้องการ">
                         </td>
                         <td style="width: 19%;">
-                            <input type="text" class="form-control" name="sale" id="sale9" placeholder="รายละเอียดผู้ขาย">
+                            <input type="text" class="form-control" name="sale" id="sale9"
+                                placeholder="รายละเอียดผู้ขาย">
                         </td>
                     </tr>
 
@@ -483,10 +514,10 @@
                                 value="10" disabled>
                         </td>
                         <td style="width: 10%;">
-                            <input type="text" class="form-control" name="id" id="id10" placeholder="รหัสสินค้า">
+                            <input type="text" class="form-control" list="idListOption" name="id" id="id10" placeholder="รหัสสินค้า">
                         </td>
                         <td colspan="2" style="width: 20%;">
-                            <input type="text" class="form-control" name="name" id="name10" placeholder="รายการ">
+                            <input type="text" class="form-control" list="nameListOption" name="name" id="name10" placeholder="รายการ">
                         </td>
                         <td class="center" style="width: 10%;">
                             <input type="text" class="form-control" name="amount" id="amount10" placeholder="จำนวน">
@@ -498,13 +529,15 @@
                             <input type="text" class="form-control" name="price" id="price10" placeholder="ราคา">
                         </td>
                         <td style="width: 10%;">
-                            <input type="text" class="form-control" name="sumPrice" id="sumPrice10" placeholder="ราคารวม">
+                            <input type="text" class="form-control" name="sumPrice" id="sumPrice10"
+                                placeholder="ราคารวม">
                         </td>
                         <td style="width: 10%;">
                             <input type="text" class="form-control" name="date" id="date10" placeholder="วันที่ต้องการ">
                         </td>
                         <td style="width: 19%;">
-                            <input type="text" class="form-control" name="sale" id="sale10" placeholder="รายละเอียดผู้ขาย">
+                            <input type="text" class="form-control" name="sale" id="sale10"
+                                placeholder="รายละเอียดผู้ขาย">
                         </td>
                     </tr>
 
@@ -516,7 +549,8 @@
                             <div class="d-flex justify-content-center">
                                 <input type="text" class="w-50 form-control transparent-input" name="" id="">
                             </div><br>
-                            ............/............./............<br></td>
+                            ............/............./............<br>
+                        </td>
                         <td class="center" colspan="2" rowspan="3" scope="col">
                             หัวหน้าฝ่าย<br>
                             ..........................................<br>
@@ -535,15 +569,104 @@
                 </tfoot>
             </table>
         </div>
+
     </div>
-
-
-
-
 
 </body>
 
 <script>
+
+    var product = [];
+    //read csv file
+    function readTextFile(file) {
+        var rawFile = new XMLHttpRequest();
+        let dataCsv = [];
+        //product = {id:id,name:name,unit:unit}
+
+        rawFile.open("GET", file, false);
+        rawFile.onreadystatechange = function () {
+            if (rawFile.readyState === 4) {
+                if (rawFile.status === 200 || rawFile.status == 0) {
+                    var allText = rawFile.responseText;
+                    dataCsv = allText.split("\n");
+                    for (let i = 0; i < dataCsv.length; i++) {
+                        //remove spacial character
+                        let temp = dataCsv[i].split(",");
+                        let id = temp[0];
+                        let name = temp[1];
+                        let unit = temp[2];
+
+                        if (id == "" || name == "" || unit == "") {
+                            continue;
+                        }
+
+                        product[i] = { id: id, name: name, unit: unit };
+                    }
+                }
+            }
+        }
+        rawFile.send(null);
+    }
+
+    function getNameById(id) {
+        for (let i = 0; i < product.length; i++) {
+            if (id == product[i].id) {
+                return product[i].name;
+            }
+        }
+    }
+
+    function getUnitById(id) {
+        for (let i = 0; i < product.length; i++) {
+            if (id == product[i].id) {
+                return product[i].unit;
+            }
+        }
+    }
+
+    function getIdByName(name) {
+        for (let i = 0; i < product.length; i++) {
+            if (name == product[i].name) {
+                return product[i].id;
+            }
+        }
+    }
+
+    function getUnitByName(name) {
+        for (let i = 0; i < product.length; i++) {
+            if (name == product[i].name) {
+                return product[i].unit;
+            }
+        }
+    }
+
+    readTextFile("product.csv");
+
+
+
+    //fill data in select option
+    for (let i = 0; i < product.length; i++) {
+
+        $("#idListOption").append("<option value='" + product[i].id + "'>" + product[i].id + "</option>");
+        $("#nameListOption").append("<option value='" + product[i].name + "'>" + product[i].name + "</option>");
+    }
+
+    $("input[name=id]").change(function () {
+        let id = $(this).val();
+        let name = getNameById(id);
+        let unit = getUnitById(id);
+        $(this).parent().next().children().val(name);
+        $(this).parent().next().next().next().children().val(unit);
+    });
+
+    $("input[name=name]").change(function () {
+        let name = $(this).val();
+        let id = getIdByName(name);
+        let unit = getUnitByName(name);
+        $(this).parent().prev().children().val(id);
+        $(this).parent().next().next().children().val(unit);
+    });
+
 
     $("input").attr("autocomplete", "off");
 
